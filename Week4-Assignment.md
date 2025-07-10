@@ -10,7 +10,7 @@ Build a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application tha
 - Configure MongoDB connection using Mongoose
 - Set up Express.js server with necessary middleware
 - Create a React front-end using Vite and configure proxy for API calls
-- Implement environment variables for configuration management
+- Implement environment variables for configuration management (use `.env` files in both `client` and `server`, and provide `.env.example` templates)
 
 ### Task 2: Back-End Development
 - Design and implement a RESTful API for a blog application with the following endpoints:
@@ -94,4 +94,4 @@ Build a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application tha
      - Features implemented
      - Screenshots of the application
 6. Your submission will be automatically graded based on the criteria in the autograding configuration
-7. The instructor will review your submission after the autograding is complete 
+7. The instructor will review your submission after the autograding is complete

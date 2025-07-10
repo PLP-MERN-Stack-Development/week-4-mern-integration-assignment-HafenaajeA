@@ -1,79 +1,166 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19895106&assignment_repo_type=AssignmentRepo)
-# MERN Stack Integration Assignment
+# MERN Stack Blog Application
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+A full-stack blog application built with **MongoDB**, **Express.js**, **React.js**, and **Node.js** (MERN). This project demonstrates seamless integration between front-end and back-end, including CRUD operations, API communication, state management, and advanced features.
 
-## Assignment Overview
+---
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+## 🚀 Features
 
-## Project Structure
+- RESTful API for blog posts and categories
+- Full CRUD functionality for posts and categories
+- User authentication (registration, login)
+- Image upload for blog post featured images
+- Pagination, search, and filtering for posts
+- Comments feature for blog posts
+- Optimistic UI updates and error handling
+- Responsive, modern UI with React and Vite
+- Clean code organization and separation of concerns
+
+---
+
+## 🗂️ Project Structure
 
 ```
 mern-blog/
 ├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
+│   ├── src/
 │   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
+│   │   ├── context/        # React context providers
 │   │   ├── hooks/          # Custom React hooks
 │   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
+│   │   ├── App.jsx         # Main application component
+│   │   └── main.jsx        # Entry point
+│   ├── public/             # Static files
+│   ├── package.json        # Client dependencies
+│   └── vite.config.js      # Vite config with API proxy
 ├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
 │   ├── models/             # Mongoose models
 │   ├── routes/             # API routes
 │   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
 │   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
+│   ├── package.json        # Server dependencies
+│   └── .env.example        # Server environment variables example
 └── README.md               # Project documentation
 ```
 
-## Getting Started
+---
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+## ⚙️ Setup Instructions
 
-## Files Included
+### Prerequisites
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [MongoDB](https://www.mongodb.com/) (local or Atlas)
+- npm
 
-## Requirements
+### 1. Clone the repository
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+```sh
+git clone <your-repo-url>
+cd week-4-mern-integration-assignment-HafenaajeA
+```
 
-## Submission
+### 2. Set up the server
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+```sh
+cd server
+cp .env.example .env   # Edit .env with your MongoDB URI and secrets
+npm install
+npm run dev            # or: npm start
+```
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+### 3. Set up the client
 
-## Resources
+```sh
+cd ../client
+npm install
+npm run dev
+```
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+- The client will be available at [http://localhost:5173](http://localhost:5173)
+- The API will be available at [http://localhost:5000/api](http://localhost:5000/api)
+
+---
+
+## 📝 API Documentation
+
+### Posts
+
+- `GET    /api/posts`           — Get all posts
+- `GET    /api/posts/:id`       — Get a single post
+- `POST   /api/posts`           — Create a new post
+- `PUT    /api/posts/:id`       — Update a post
+- `DELETE /api/posts/:id`       — Delete a post
+
+### Categories
+
+- `GET    /api/categories`      — Get all categories
+- `POST   /api/categories`      — Create a new category
+
+### Auth (if implemented)
+
+- `POST   /api/auth/register`   — Register a new user
+- `POST   /api/auth/login`      — Login and receive a JWT
+
+---
+
+## 🖼️ Screenshots
+
+to be updated
+
+---
+
+## 🛠️ Technologies Used
+
+- **Frontend:** React, Vite, React Router, Context API, Fetch API
+- **Backend:** Node.js, Express.js, Mongoose, express-validator, dotenv, cors
+- **Database:** MongoDB
+- **Other:** JWT (for auth), Multer (for image upload), custom middleware
+
+---
+
+## 📄 Environment Variables
+
+### Server (`server/.env`)
+
+```
+MONGODB_URI=mongodb://localhost:27017/mern_blog
+PORT=5000
+NODE_ENV=development
+JWT_SECRET=your_jwt_secret
+```
+
+### Client (`client/.env`)
+
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+---
+
+## ✨ Features Implemented
+
+- [x] RESTful API with Express and MongoDB
+- [x] React front-end with routing and state management
+- [x] CRUD for posts and categories
+- [x] User authentication (JWT)
+- [x] Image upload for posts
+- [x] Pagination, search, and filtering
+- [x] Comments on posts
+- [x] Optimistic UI and error handling
+
+---
+
+## 📚 Resources
+
+- [MongoDB Docs](https://docs.mongodb.com/)
+- [Express.js Docs](https://expressjs.com/)
+- [React Docs](https://react.dev/)
+- [Node.js Docs](https://nodejs.org/en/docs/)
+- [Mongoose Docs](https://mongoosejs.com/docs/)
+
+---
+
+
+Here is my repo link: `https://github.com/PLP-MERN-Stack-Development/week-4-mern-integration-assignment-HafenaajeA.git`
