@@ -57,7 +57,7 @@ mern-blog/
 ### 1. Clone the repository
 
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/PLP-MERN-Stack-Development/week-4-mern-integration-assignment-HafenaajeA.git
 cd week-4-mern-integration-assignment-HafenaajeA
 ```
 
